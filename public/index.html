@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa de Dios, Mi Hogar</title>
+  <link rel="icon" href="./assets/images/icono.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            //primary: { "50": "#eff6ff", "100": "#dbeafe", "200": "#bfdbfe", "300": "#A27E0B", "400": "#60a5fa", "500": "#3b82f6", "600": "#2563eb", "700": "#C39E0E", "800": "#EDC70C", "900": "#1e3a8a", "950": "#172554" },
+            primary: { "50": "#eff6ff", "100": "#dbeafe", "200": "#bfdbfe", "300": "#E54AA0", "400": "#60a5fa", "500": "#3b82f6", "600": "#2563eb", "700": "#C74FBC", "800": "#A656DC", "900": "#1e3a8a", "950": "#172554" },
+            background: { "700": '#0C172D' },
+          }
+        },
+        fontFamily: {
+          'nav-bar': [
+            'sans-serif',
+          ],
+          'body': [
+            'sans-serif',
+            'system-ui',
+            '-apple-system',
+            'system-ui',
+            'Segoe UI',
+            'Roboto',
+            'Helvetica Neue',
+            'Arial',
+            'Noto Sans',
+            'sans-serif',
+            'Apple Color Emoji',
+            'Segoe UI Emoji',
+            'Segoe UI Symbol',
+            'Noto Color Emoji'
+          ],
+          'sans': [
+            'Inter',
+            'ui-sans-serif',
+            'system-ui',
+            '-apple-system',
+            'system-ui',
+            'Segoe UI',
+            'Roboto',
+            'Helvetica Neue',
+            'Arial',
+            'Noto Sans',
+            'sans-serif',
+            'Apple Color Emoji',
+            'Segoe UI Emoji',
+            'Segoe UI Symbol',
+            'Noto Color Emoji'
+          ]
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <!--inicio navbar-->
+  <header class="bg-background-700">
+    
+    
+    <nav class=" px-4 lg:px-6 py-2.5 bg-gradient-to-r ">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl text-white">
+        <a href="#" class="flex items-center font-nav-bar">
+          <img src="./assets/images/logo.png" class="mr-3 h-10 sm:h-14" alt="Casa de Dios" />
+          <span class="self-center text-xl font-semibold whitespace-nowrap">CASA DE DIOS</span>
+        </a>
+        <div class="flex items-center lg:order-2">
+          <!--
+          <a href="#"
+            class="text-white dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium 
+            rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log
+            in</a>-->
+          <a href="#sociales"
+            class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium 
+            rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none">Empezar</a>
+          <button data-collapse-toggle="mobile-menu-2" type="button"
+            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 
+            focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="mobile-menu-2" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#congreso" class="text-sm font-semibold leading-6 text-white-900">Congreso</a>
+          <a href="#eventos" class="text-sm font-semibold leading-6 text-white-900">Eventos</a>
+          <a href="#servicios" class="text-sm font-semibold leading-6 text-white-900">Nuestros servicios</a>
+          <a href="#pastores" class="text-sm font-semibold leading-6 text-white-900">Pastores</a>
+          <a href="#contacto" class="text-sm font-semibold leading-6 text-white-900">Contáctanos</a>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--final navbar-->
+
+  <div class="fixed inset-x-0 bottom-0 flex justify-end p-6">
+    <a href="https://wa.me/51994256038" target="_blank" class="bg-green-500 hover:bg-green-700 text-white font-bold p-4 rounded-full">
+      <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
+  </div>
+  
+    <!--  CAROUSEL -->
+    <div class="relative isolate overflow-hidden bg-gray-900 py-6 sm:py-8 md:py-12 lg:py-16 xl:py-24 2xl:py-32">
+      <img src="/assets/images/fondo-website.png" alt="" 
+      class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center backdrop-blur">
+      <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" 
+        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 
+        60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 
+        76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl 
+      sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] 
+        to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 
+        80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 
+        17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white">Casa de Dios</h2>
+          <p class="mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">Somos una iglesia apasionada por servir a Dios, 
+            generando innovación y bienestar a la comunidad.</p>
+        </div>
+        <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+          <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+            <a href="#">Servicio <span aria-hidden="true"></span></a>
+            <a href="#">Innovación <span aria-hidden="true"></span></a>
+            <a href="#">Bienestar <span aria-hidden="true"></span></a>
+          </div>
+          <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-4 lg:grid-cols-4">
+           
+          </dl>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-center">
+        <div class="p-2.5 md:p-8 flex flex-col flex-wrap items-center text-white">
+          <div class="pb-2"><a href="http://www.youtube.com/@CasadeDiosTingoMaria" target="_blank">
+            <i class="fa-brands fa-youtube fa-2x bg-gray-400 p-7 rounded-full hover:bg-primary-800"></i></a>
+          </div>
+          <div>YouTube</div>
+        </div>
+        <div class="p-2.5 md:p-8 flex flex-col flex-wrap items-center text-white">
+          <div class="pb-2">
+            <a href="https://www.instagram.com/casadediostingomaria/" target="_blank">
+              <i class="fa-brands fa-instagram fa-2x bg-gray-400 p-7 rounded-full hover:bg-primary-800"></i>
+            </a>
+          </div>
+          <div>Instagram</div>
+        </div>
+        <div class="p-2.5 md:p-8 flex flex-col flex-wrap items-center text-white">
+          <div class="pb-2">
+            <a href="#horarios" target="">
+              <i class="fa-brands fa-space-awesome fa-2x bg-gray-400 p-7 rounded-full hover:bg-primary-800"></i>
+            </a>
+          </div>
+          <div>Programación</div>
+        </div>
+        <div class="p-2.5 md:p-8 flex flex-col flex-wrap items-center text-white">
+          <div class="pb-2">
+            <a href="https://www.facebook.com/CASADEDIOSTM" target="_blank"><i class="fa-brands fa-facebook fa-2x bg-gray-400 p-7 rounded-full hover:bg-primary-800"></i></a>
+          </div>
+          <div>Facebook</div>
+        </div>
+  
+        <div class="p-2.5 md:p-8 flex flex-col flex-wrap items-center text-white">
+          <div class="pb-2">
+            <a href="" target=""><i class="fa-brands fa-tiktok fa-2x bg-gray-400 p-7 rounded-full hover:bg-primary-800"></i></a>
+          </div>
+          <div>TikTok</div>
+        </div>
+        <div class="p-2.5 md:p-8 flex flex-col flex-wrap items-center text-white">
+          <div class="pb-2">
+            <a href="https://wa.me/51994256038" target="_blank"><i class="fa-brands fa-whatsapp fa-2x bg-gray-400 p-7 rounded-full hover:bg-primary-800"></i></a>
+          </div>
+          <div>WhatsApp</div>
+        </div>
+        <div class="p-2.5 md:p-8 flex flex-col flex-wrap items-center text-white">
+          <div class="pb-2">
+            <a href="" target=""><i class="fa-brands fa-discourse fa-2x bg-gray-400 p-7 rounded-full hover:bg-primary-800"></i></a>
+          </div>
+          <div>Te Ayudamos</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+
+
+  <!-- SOCIAL MEDIA -->
+
+
+  <!-- QUienes somos -->
+  <!-- <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-800">
+    <div class="max-w-7xl mx-auto sm:px-3 md:px-5 px-3">
+        <div class="isolate overflow-hidden py-24 md:pt-24 lg:flex">
+          <div class="mx-auto lg:w-1/2 text-center lg:mx-0 lg:text-left">
+            <h2 class="mb-6 text-3xl font-bold tracking-tight text-white sm:text-4xl">Año de Crecimiento<br></h2>
+            <p class="text-lg leading-8 text-gray-300">Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
+              Malesuada adipiscing sagittis vel nulla.</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+              <a href="#"
+                class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get
+                started</a>
+              <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span
+                  aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="lg:w-1/2 lg:ml-8">
+            <img class="rounded-lg shadow-lg dark:shadow-black/100 left-40 bg-white/5 ring-white/10 h-auto max-w-full"
+              src="./assets/images/misiones.png" alt="App screenshot" width="2048" height="1279"
+              >
+          </div>
+        </div>
+    </div>
+  </section> -->
+
+  
+
+  <!--
+  <section class="max-w-screen-md mx-auto">
+    <div class="relative isolate mt-16 h-80 lg:mt-8">
+      <h2 class="text-4xl mb-4 text-center bg-clip-text text-transparent
+        bg-gradient-to-r from-pink-500 to-blue-500 font-semibold  sm:text-6xl">Próximos eventos</h2>
+      <div class="flex space-x-4  grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-1 items-center justify-center">
+        <div
+          class="bg-gray-700 p-2 rounded-lg shadow-lg border border-gray-600 transform transition-transform duration-500 hover:scale-125 group">
+          <img class="w-full h-50 object-cover rounded-lg" src="./assets/images/aniversario.png"
+            alt="Aniversario de Casa de Dios">
+          <p class="text-sm mt-2 text-gray-100">Junio 13, 14 y 15 - 2024</p>
+          <h3 class="text-sm font-bold mt-2 text-gray-100">ANIVERSARIO DE CASA DE DIOS</h3>
+          <p class="text-sm text-gray-200">Celebramos con alegría nuestro aniversario como iglesia del Señor</p>
+        </div>
+        <div
+          class="bg-gray-700 p-2 rounded-lg shadow-lg border border-gray-600 transform transition-transform duration-500 hover:scale-125 group">
+          <img class="w-full h-50 object-cover rounded-lg" src="./assets/images/misiones.png"
+            alt="Congreso de Misiones">
+          <p class="text-sm mt-2 text-gray-100">Septiembre 25, 26, 27 - 2024</p>
+          <h3 class="text-sm font-bold mt-2 text-gray-100">CONGRESO DE MISIONES</h3>
+          <p class="text-gray-100 text-sm">Un tiempo donde grandes hombres de Dios, comparten de su palabra a
+            traves de sus vidas</p>
+        </div>
+        <div
+          class="bg-gray-700 p-2 rounded-lg shadow-lg border border-gray-600 transform transition-transform duration-500 hover:scale-125 group">
+          <img class="w-full h-50 object-cover rounded-lg" src="./assets/images/ebdv.png"
+            alt="Escuela Bíblica de Vacaciones">
+          <p class="text-sm mt-2 text-gray-100">2024</p>
+          <h3 class="text-sm font-bold mt-2 text-gray-100">ESCUELA BÍBLICA DE VACACIONES</h3>
+          <p class="text-sm text-gray-100">Enfoque generacional de Casa de Dios, trabajando con los niños para las
+            nuevas generaciones</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+  <!-- CONGRESO DE MISIONES -->
+  <section id="congreso" class="dark:text-gray-100  py-24">
+    <div class="max-w-7xl mx-auto sm:px-3 md:px-5 px-3">
+      <div class="relative isolate overflow-hidden lg:flex">
+        <div class="max-h-full lg:w-1/2 text-center lg:mx-0 lg:flex-auto lg:text-center">
+          <h2 class="text-4xl sm:text-4xl md:text-5xl lg:text-5xl mb-9 text-center bg-clip-text text-transparent bg-gradient-to-r 
+          from-pink-500 to-violet-500 font-bold">CONGRESO DE MISIONES </h2>
+
+          <h2 class=" text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 text-center bg-clip-text text-transparent
+              bg-gradient-to-r from-pink-500 to-violet-500 font-bold">2024</h2>
+
+          <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-9xl mb-8 text-center bg-clip-text text-transparent
+              bg-gradient-to-r from-pink-500 to-violet-500 font-bold">"Levantate y vé"</h2>
+          <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-center">
+
+            <!-- Boton inscribirse -->
+            <button type="button" 
+            class="block max-w-md shadow-lg shadow-cyan-100/100 border-x-2 rounded-lg
+            border-cyan-500 px-9 py-4
+            bg-gradient-to-r from-green-400 to-blue-500
+            text-white
+            text-2xl
+            hover:from-pink-500 hover:to-yellow-500
+            font-semibold" data-modal-target="crud-modal" data-modal-toggle="crud-modal">
+              Inscribirme!
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- SECTION MODAL REGISTER FOR CONGRESS INTERNATIONAL -->
+
+  <!-- Main modal -->
+<div id="crud-modal" tabindex="-1" aria-hidden="true" 
+class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 
+justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    Incripción congreso de misiones
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <form action="/v1/registration" method="POST" class="p-4 md:p-5">
+                <div class="grid gap-4 mb-4 grid-cols-2">
+                    <div class="col-span-2">
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombres</label>
+                        <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm 
+                        rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 
+                        dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" 
+                        placeholder="Escribe sus nombres" required="">
+                    </div>
+                    <div class="col-span-2">
+                      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellidos</label>
+                      <input type="text" name="lastname" id="fullnames" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm 
+                      rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 
+                      dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                       placeholder="Escribe sus apellidos" required="">
+                  </div>
+                  <div class="col-span-2">
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo</label>
+                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm 
+                    rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 
+                    dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" 
+                    placeholder="Type product name" required="">
+                </div>
+                    <!-- <div class="col-span-2 sm:col-span-1">
+                        <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
+                        <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                    </div> -->
+                    <div class="col-span-2">
+                      <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número de teléfono</label>
+                      <input type="tel" name="phone" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+                      focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 
+                      dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" 
+                      placeholder="Escribe el número de teléfono" required="">
+                  </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">País</label>
+                        <select name="country" id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                            <option selected="">Perú</option>
+                            <option value="TV">Colombia</option>
+                            <option value="PC">Chile</option>
+                            <option value="GA">Bolivia</option>
+                            <option value="PH">Ecuador</option>
+                            <option value="PH">Venezuela</option>
+                            <option value="PH">Argentina</option>
+                            <option value="PH">Paraguay</option>
+                            <option value="PH">Uruguay</option>
+                            <option value="PH">Brasil</option>
+                            <option value="PH">Otros</option>
+                        </select>
+                    </div>
+                    <div class="col-span-2">
+                        <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Agregue una descripción</label>
+                        <textarea name="description" id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg 
+                        border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 
+                        dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                         placeholder="Escribe una descripción"></textarea>                    
+                    </div>
+                </div>
+                <button type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                    Inscribirme!
+                </button>
+            </form>
+        </div>
+    </div>
+</div> 
+
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------------------- -->
+
+<!-- PRÓXIMOS EVENTOS -->
+  
+  <section id="eventos" class="py-24">
+    <div class="max-w-7xl mx-auto px-3 sm:px-3 md:px-5 lg:px-8">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 tracking-tight bg-clip-text text-transparent text-center bg-gradient-to-r from-pink-500 to-violet-500 font-semibold pb-10">Próximos Eventos</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="flex flex-col items-center bg-gray-800 border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-48 md:h-64 lg:h-96 md:w-48 md:rounded-none md:rounded-s-lg" src="./assets/images/event-1.jpg" alt="">
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-xl sm:text-2xl md:text-2xl lg:text-2xl font-bold tracking-tight text-white">Aniversario de Casa de Dios</h5>
+            <p class="mb-3 font-normal text-gray-400">Celebramos con alegría nuestro aniversario como iglesia del Señor.</p>
+            <p class="text-sm text-gray-400">Junio 13, 14 y 15 - 2024</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center bg-gray-800 border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-48 md:h-64 lg:h-96 md:w-48 md:rounded-none md:rounded-s-lg" src="./assets/images/event-1.jpg" alt="">
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-xl sm:text-2xl md:text-2xl lg:text-2xl font-bold tracking-tight text-white">Congreso de Misiones</h5>
+            <p class="mb-3 font-normal text-gray-400">Un tiempo donde grandes hombres de Dios, comparten de su palabra a traves de sus vidas.</p>
+            <p class="text-sm text-gray-400">Septiembre 25, 26, 27 - 2024</p>
+          </div>
+        </div>
+        <!-- <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100">
+          <img class="object-cover w-full rounded-t-lg h-48 md:h-64 lg:h-96 md:w-48 md:rounded-none md:rounded-s-lg" src="./assets/images/event-1.jpg" alt="">
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-xl sm:text-2xl md:text-2xl lg:text-2xl font-bold tracking-tight text-gray-900">Escuela Biblica de Vacaciones</h5>
+            <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            <p class="text-sm text-gray-600">Sep 25, 26, 27 - 2024</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100">
+          <img class="object-cover w-full rounded-t-lg h-48 md:h-64 lg:h-96 md:w-48 md:rounded-none md:rounded-s-lg" src="./assets/images/event-1.jpg" alt="">
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-xl sm:text-2xl md:text-2xl lg:text-2xl font-bold tracking-tight text-gray-900">Noteworthy technology acquisitions 2021</h5>
+            <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            <p class="text-sm text-gray-600">Sep 25, 26, 27 - 2024</p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+  <!-- NUestros servicios -->
+  <section id="servicios" class="my-24">
+    <div class="max-h-full max-w-7xl mx-auto px-3 sm:px-3 md:px-5 lg:px-8 relative overflow-hidden bg-white">
+      <div class="pb-20 pt-16 sm:pb-24 sm:pt-24 lg:pb-48 lg:pt-40">
+        <div class="relative mx-auto max-w-7xl pr-4 sm:static sm:pr-6 lg:pr-8">
+          <div class="sm:max-w-lg">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 tracking-tight bg-clip-text 
+            text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-semibold">Nuestros servicios</h1>
+            <p class="mt-4 text-sm sm:text-md md:text-lg lg:text-xl text-gray-500">"Ven y se 
+              parte de las cosas maravillosas que tiene Dios para tu vida, ven y sé parte de nuestros servicios"</p>
+          </div>
+          <div>
+            <div class="mt-10">
+              <!-- Decorative image grid -->
+              <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+                <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                  <div class="flex items-center space-x-6 lg:space-x-8">
+                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div class="h-16 w-16 sm:h-32 sm:w-32 md:h-48 md:w-48 lg:h-64 lg:w-44 overflow-hidden rounded-lg">
+                        <img src="./assets/images/carrusel/imag4.png" alt="" class="h-full w-full object-cover object-center">
+                      </div>
+                      <div class="h-16 w-16 sm:h-32 sm:w-32 md:h-48 md:w-48 lg:h-64 lg:w-44 overflow-hidden rounded-lg">
+                        <img src="./assets/images/carrusel/img.png" alt="" class="h-full w-full object-cover object-center">
+                      </div>
+                    </div>
+                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div class="h-16 w-16 sm:h-32 sm:w-32 md:h-48 md:w-48 lg:h-64 lg:w-44 overflow-hidden rounded-lg">
+                        <img src="./assets/images/carrusel/img5.png" alt="" class="h-full w-full object-cover object-center">
+                      </div>
+                      <div class="h-16 w-16 sm:h-32 sm:w-32 md:h-48 md:w-48 lg:h-64 lg:w-44 overflow-hidden rounded-lg">
+                        <img src="./assets/images/carrusel/img2.png" alt="" class="h-full w-full object-cover object-center">
+                      </div>
+                      <div class="h-16 w-16 sm:h-32 sm:w-32 md:h-48 md:w-48 lg:h-64 lg:w-44 overflow-hidden rounded-lg">
+                        <img src="./assets/images/carrusel/img3.png" alt="" class="h-full w-full object-cover object-center">
+                      </div>
+                    </div>
+                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div class="h-16 w-16 sm:h-32 sm:w-32 md:h-48 md:w-48 lg:h-64 lg:w-44 overflow-hidden rounded-lg">
+                        <img src="./assets/images/aniversario.png" alt="" class="h-full w-full object-cover object-center">
+                      </div>
+                      <div class="h-16 w-16 sm:h-32 sm:w-32 md:h-48 md:w-48 lg:h-64 lg:w-44 overflow-hidden rounded-lg">
+                        <img src="./assets/images/ebdv.png" alt="" class="h-full w-full object-cover object-center">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <a href="#horarios" class="inline-block rounded-md border border-transparent 
+              bg-indigo-600 px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 lg:px-8 lg:py-3 text-center 
+              font-medium text-white hover:bg-indigo-700">Ver Horarios</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- PASTORES -->
+  
+  <section id="pastores" class="my-24 dark:text-gray-100">
+    
+    <div class="max-w-7xl mx-auto sm:px-3 md:px-5 px-3">
+      <!-- <h2 class="text-4xl mb-6 text-center bg-clip-text text-transparent
+        bg-gradient-to-r from-pink-500 to-blue-500 font-bold sm:text-5xl ">Nuestros Pastores</h2> -->
+        
+        <h1 class="text-4xl mb-4 tracking-tight  bg-clip-text text-transparent text-center
+        bg-gradient-to-r from-pink-500 to-violet-500 font-semibold sm:text-6xl pb-10">
+          Nuestros pastores
+       </h1>
+
+      <div class="grid-cols-1 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-4">
+        <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl mb-9 sm:mb-0">
+          <div
+            class="relative mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+            <img
+              class="min-h-72 lg:min-h-72 max-h-72 w-full object-cover"
+              src="./assets/images/pastores/victor_rut.jpg"
+              alt="card-image" />
+          </div>
+          <div class="p-6">
+            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+              Victor Mallqui Suarez y Rut Huaman
+            </h5>
+            <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+              Pastores Principales.
+            </p>
+          </div>
+        </div>
+        <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl mb-9 sm:mb-0">
+          <div
+            class="relative mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+            <img
+              class="min-h-72 max-h-72 w-full object-cover"
+              src="./assets/images/pastores/gilbert.png"
+              alt="card-image" />
+          </div>
+          <div class="p-6">
+            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+              Gilbert Pérez Pezo
+            </h5>
+            <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+              Pastor del Ministerio de interseción.
+            </p>
+          </div>
+        </div>
+        <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl mb-9 sm:mb-0">
+          <div
+            class="relative mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+            <img
+              class="min-h-72 max-h-72 w-full object-cover"
+              src="./assets/images/pastores/aurelia.png"
+              alt="card-image" />
+          </div>
+          <div class="p-6">
+            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+              Aurelia Gabancho
+            </h5>
+            <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+              Pastora del Ministerio de adultos.
+            </p>
+          </div>
+        </div>
+
+        
+          <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl mb-9 sm:mb-0">
+            <div
+              class="relative mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+              <img
+                class="min-h-72 lg:min-h-72 max-h-72 w-full object-cover"
+                src="./assets/images/pastores/carlos.png"
+                alt="card-image" />
+            </div>
+            <div class="p-6">
+              <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                Carlos Upiachihua Peña
+              </h5>
+              <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+                Pastor de Jóvenes | Trascendentes.
+              </p>
+            </div>
+          </div>
+          <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl mb-9 sm:mb-0">
+            <div
+              class="relative mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+              <img
+                class="min-h-72 lg:min-h-72 max-h-72 w-full object-cover"
+                src="./assets/images/pastores/susana.png"
+                alt="card-image" />
+            </div>
+            <div class="p-6">
+              <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                Susana Riega Melgarejo
+              </h5>
+              <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+                Pastora de adolescentes | Relevo
+              </p>
+            </div>
+          </div>
+        
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Horarios de los servicios -->
+  <section id="horarios">
+    
+  <div class="bg-white py-24 sm:py-32">
+    <h1 class="text-4xl mb-4 tracking-tight  bg-clip-text text-transparent text-center
+    bg-gradient-to-r from-pink-500 to-violet-500 font-semibold sm:text-6xl pb-10">
+      Horarios de servicios
+   </h1>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+          <dt class="text-base leading-7">Domingo - 8.00 AM </dt>
+          <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-3xl">Primer Servicio</dd>
+        </div>
+        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+          <dt class="text-base leading-7">Domingo - 6:00 PM</dt>
+          <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-3xl">Segundo Servicio</dd>
+        </div>
+        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+          <dt class="text-base leading-7">Domingo - 7:45 PM</dt>
+          <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-3xl">Servicio Adolescentes | Jóvenes</dd>
+        </div>
+        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+          <dt class="text-base leading-7">Martes - 7:30 PM</dt>
+          <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-3xl">Noche de clamor</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<hr>
+  <!-- Contactanos -->
+  <section id="contacto" class="">
+    <div class="max-w-7xl mx-auto sm:px-3 md:px-5 px-3 pb-24">
+      <div>
+        <h2 class="text-4xl mb-6 text-center bg-clip-text text-transparent
+          bg-gradient-to-r from-pink-500 to-blue-500 font-semibold sm:text-5xl ">Contacto</h2>
+      </div>
+      <div class="flex justify-center">
+        <form class="w-full max-w-2xl">
+          <div class="flex flex-wrap mb-6">
+            <div class="w-full">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                Nombre
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Nombre">
+            </div>
+          </div>
+          <div class="flex flex-wrap mb-6">
+            <div class="w-full">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
+                Correo
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-email" type="email" placeholder="Correo Electrónico">
+            </div>
+          </div>
+          <div class="flex flex-wrap mb-6">
+            <div class="w-full">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-phone">
+                Número de Teléfono
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-phone" type="text" placeholder="Número de Telefono">
+            </div>
+          </div>
+          <div class="flex flex-wrap mb-6">
+            <div class="w-full">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-country">
+                Seleccione su país
+              </label>
+              <div class="relative">
+                <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-country">
+                  <option>Perú</option>
+                  <option>brasil</option>
+                  <option>Bolivia</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap mb-6">
+            <div class="w-full">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-message">
+                Mensaje
+              </label>
+              <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-message" type="text" placeholder="Tu Mensaje"></textarea>
+            </div>
+          </div>
+          <div class="">
+            <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--
+  Heads up! 👋
+
+  Plugins:
+    - @tailwindcss/forms
+-->
+
+  <footer class="bg-white">
+    <div class="max-w-7xl mx-auto sm:px-3 md:px-5 px-3">
+      <div class="mx-auto max-w-md">
+        <strong class="block text-center text-xl font-bold text-gray-900 sm:text-3xl">
+          ¿Quiere que le enviemos por correo electrónico las últimas novedades?
+        </strong>
+
+        <form class="mt-6">
+          <div class="relative max-w-lg">
+            <label class="sr-only" for="email"> Email </label>
+            <input
+              class="w-full rounded-full border-gray-200 bg-gray-100 p-4 pe-32 text-sm font-medium"
+              id="email"
+              type="email"
+              placeholder="john@gmail.com"
+            />
+            <button
+              class="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-10">
+        <div class="lg:max-w-80 items-center">
+          <p class="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
+            "En la unidad de nuestra fe, encontramos la luz de la esperanza y el amor de Dios. 
+            ¡Gracias por ser parte de nuestra comunidad!"
+
+          </p>
+          <div class="mt-6 flex justify-center gap-4 lg:justify-start">
+            <a
+              class="text-gray-700 transition hover:text-gray-700/75"
+              href=""
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="sr-only"> Facebook </span>
+
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+
+            <a
+              class="text-gray-700 transition hover:text-gray-700/75"
+              href=""
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="sr-only"> Instagram </span>
+
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-2 grid grid-cols-1 gap-2 text-center lg:grid-cols-3 lg:text-left">
+          
+          <div>
+            <strong class="font-medium text-gray-900"> About </strong>
+            <ul class="mt-6 space-y-1">
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Quienes somos </a>
+              </li>
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Eventos Principales</a>
+              </li>
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Congreso internacional</a>
+              </li>
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Nuestros servicios</a>
+              </li>
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Nuestro ADN</a>
+              </li>
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Nuestros Pastores</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <strong class="font-medium text-gray-900"> Contact </strong>
+            <ul class="mt-6 space-y-1">
+              <li class="flex items-center justify-center lg:justify-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="mr-3 h-5 w-5">
+                  <path
+                    d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                  <path
+                    d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                </svg>
+                Tingo María, NY 31101, PE
+              </li>
+              <li class="flex items-center justify-center lg:justify-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="mr-3 h-5 w-5">
+                  <path
+                    d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                  <path
+                    d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                </svg>
+                casadediostingomaria@gmail.com
+              </li>
+              <li class="flex items-center justify-center lg:justify-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="mr-3 h-5 w-5">
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                    clip-rule="evenodd" />
+                </svg>
+                +51 994 256 038
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 border-t border-gray-100 py-8">
+        <p class="text-center text-xs/relaxed text-gray-500">
+          © 2024 Casa de Dios. Todos los derechos reservados.
+          <br />
+
+          Created with
+          <a href="" class="text-gray-700 underline transition hover:text-gray-700/75">cdd</a>
+          and
+          <a href="" class="text-gray-700 underline transition hover:text-gray-700/75"
+            >comunications ministery</a
+          >.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!--
+    <i class="fa fa-bars fa-xs"></i>
+    <i class="fa fa-bars fa-sm"></i>
+    <i class="fa fa-bars fa-lg"></i>
+    <i class="fa fa-bars fa-2x"></i>
+    <i class="fa fa-bars fa-3x"></i>
+    <i class="fa fa-bars fa-4x"></i>
+    <i class="fa fa-bars fa-5x"></i>
+    <i class="fa fa-bars fa-10x"></i>
+  -->
+
+
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+  <script>
+    window.addEventListener("load", function (event) {
+      const links = document.querySelectorAll("a");
+      const buttons = document.querySelectorAll("button");
+
+      /* links.forEach(function (link) {
+        link.addEventListener("click", function (ev) {
+          
+        });
+      }); */
+
+      buttons.forEach(function (button) {
+        // button.addEventListener("click", function (ev) {
+        //   ev.preventDefault();
+        // });
+      });
+    });
+  </script>
+</body>
+</html>
